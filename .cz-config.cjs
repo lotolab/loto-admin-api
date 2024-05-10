@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   types: [
      {value: 'feat',   name: '✨特性:   一个新的特性'},
@@ -10,16 +8,15 @@ module.exports = {
      {value: 'perf',   name: '⚡️性能:   提升性能'},
      {value: 'test',   name: '🧪测试:   添加一个测试'},
      {value: 'build',   name: '📦构建:   影响构建系统或外部依赖项的更改'},
-     {value: 'ci',   name: '👷ci:   更改为我们的CI配置文件和脚本'},
+     {value: 'ci',   name: '👷ci:   架构持续集成的功能维护'},
      {value: 'chore',   name: '🚀chore:   日常维护'},
      {value: 'revert', name: '⏪  revert:    代码回滚'},
   ],
-​  usePreparedCommit: false, // to re-use commit from ./.git/COMMIT_EDITMSG
-  allowTicketNumber: false,
-  isTicketNumberRequired: false,
-  ticketNumberPrefix: 'TICKET-',
-  ticketNumberRegExp: '\\d{1,5}',
-
+// ​  usePreparedCommit: false, // to re-use commit from ./.git/COMMIT_EDITMSG
+//   allowTicketNumber: false,
+//   isTicketNumberRequired: false,
+//   ticketNumberPrefix: 'TICKET-',
+//   ticketNumberRegExp: '\\d{1,5}',
   messages: {
     type: '选择一种你的提交类型:',
     scope: '选择一个scope (可选):',

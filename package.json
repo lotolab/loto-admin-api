@@ -5,6 +5,7 @@
   "author": "lotoopenlab",
   "private": true,
   "license": "LICENSE",
+  "type": "module",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
