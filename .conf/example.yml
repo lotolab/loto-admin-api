@@ -1,0 +1,44 @@
+# local config example
+app:
+  name: loto-admin-api
+  prefix: 'v1'
+  wiki: 
+
+# auth
+jwt:
+  version: 2
+  iss: lotoOpenLab
+  sub: loto-sso
+  secretKey: <your secret>
+  expirein: 120m
+  encryptRounds: 10
+
+STAGE: development
+
+server:
+  port: 8008
+
+# DB MYSQL 5.7 or 8.x
+mysql:
+  host: 127.0.0.1
+  port: 3316
+  database: <your DB name>
+  username: <username>
+  password: <password>
+  logging: false
+
+# cache-redis
+cache:
+  redis:
+    host: 127.0.0.1
+    port: 16379
+    db: 1
+    ttl: 5
+    passport: <>
+
+bce:
+  wxai:
+    name: wx-main
+    appId: <your bce app id>
+    apiKey: <api key>
+    apiSecret: <api secret>
