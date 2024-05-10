@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "commit": "git add . && cz",
+    "commit": "git-cz",
     "dev": "cross-env STAGE=dev nest start --watch",
     "format": "prettier --write \"src/**/*.(ts|cjs|js)\" \"test/**/*.(ts|cjs|js)\"",
     "start": "nest start",
@@ -22,6 +22,14 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path":"cz-customizable"
+    },
+    "cz-customizable":{
+      "config": ".cz-config.cjs"
+    }
   },
   "lint-staged": {
     "*.{js,ts}": [
@@ -90,6 +98,7 @@
     "cz-customizable": "^7.0.0",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "husky": "8.0.3",
