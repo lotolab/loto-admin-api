@@ -20,6 +20,7 @@ async function bootstrap() {
   const appPort = configService.get<number>('server.port', 3000);
   const globalApiPrefix = configService.get<string>('app.prefix', 'v3');
   const SWAGERR_ENABLE = isDevMode();
+  console.log(SWAGERR_ENABLE);
 
   //允许跨域请求
   app.enableCors();
