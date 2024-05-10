@@ -86,3 +86,13 @@ import { ChatGptGateway } from './chat-gpt/chat-gpt.gateway';
 export class AppModule {}
 
 # https://blog.stackademic.com/unlocking-stream-capabilities-in-openai-chat-integration-d9ab49c4659d
+
+## CI commitlint
+
+```bash
+# 当你在git commit时，会触发到commit-msg这个hooks，执行commitlint进行commit message校验。
+# 当检验不通过时，则不能完成本次commit操作 
+pnpm exec commitlint --edit $1
+
+
+```
