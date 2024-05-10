@@ -1,21 +1,20 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { CoreModule } from './core/core.module';
-import yamlConfiguration, {
-  TypeormConfigService,
-  configValidationSchema,
-} from './config';
+import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ApiModule } from './api/api.module';
+import { AuthModule } from './auth/auth.module';
+import { CoreModule } from './core/core.module';
+import { JwtGuard } from './guards/jwt.guard';
 import { BceModule } from './sdk/bce/bce.module';
 import { WxaiModule } from './sdk/wxai/wxai.module';
-import { AuthModule } from './auth/auth.module';
-import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
-import { JwtGuard } from './guards/jwt.guard';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 import { JwtStrategy } from './auth';
+import yamlConfiguration, {
+  configValidationSchema,
+  TypeormConfigService,
+} from './config';
 import { TransformInterceptor } from './interceptors';
 
 @Module({

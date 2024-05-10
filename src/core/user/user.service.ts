@@ -1,12 +1,12 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { UserEntity } from '../entities';
-import { IsNull, Repository } from 'typeorm';
-import { AccountTypeEnum } from '../enums';
-import { BizCodeEnum, BizException } from 'src/exception';
-import { isPhone } from '../utils';
 import { isEmail } from 'class-validator';
+import { BizCodeEnum, BizException } from 'src/exception';
+import { IsNull, Repository } from 'typeorm';
+import { UserEntity } from '../entities';
+import { AccountTypeEnum } from '../enums';
 import { ICurrentUser, UserInfoType } from '../interface';
+import { isPhone } from '../utils';
 
 @Injectable()
 export class UserService {

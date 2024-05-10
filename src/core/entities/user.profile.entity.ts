@@ -1,6 +1,6 @@
 import { Column, Entity } from 'typeorm';
-import CommonEntity from './common.entity';
 import { GenderEnum } from '../enums';
+import CommonEntity from './common.entity';
 
 @Entity('sys_user_profile')
 export class UserProfileEntity extends CommonEntity {

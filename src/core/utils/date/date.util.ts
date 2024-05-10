@@ -1,12 +1,12 @@
 import {
-  format,
   addDays,
-  addSeconds,
   addHours,
+  addMinutes,
   addMonths,
+  addSeconds,
   addWeeks,
   addYears,
-  addMinutes,
+  format,
 } from 'date-fns';
 
 export const formatDate = (date?: any): string => {

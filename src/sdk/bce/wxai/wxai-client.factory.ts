@@ -1,8 +1,8 @@
 import { FactoryProvider } from '@nestjs/common';
-import WxaiClient, { WxaiClientType } from '../../wxai/lib/wxai-client';
-import { BCE_WXAI_CLIENT } from '../../wxai/lib/wxai-constants';
 import { ConfigService } from '@nestjs/config';
 import { IWxaiSDKConfig } from '../../wxai/lib/interfaces/wxai.interface';
+import WxaiClient, { WxaiClientType } from '../../wxai/lib/wxai-client';
+import { BCE_WXAI_CLIENT } from '../../wxai/lib/wxai-constants';
 
 export const WxaiClientFactory: FactoryProvider<Promise<WxaiClientType>> = {
   provide: BCE_WXAI_CLIENT,

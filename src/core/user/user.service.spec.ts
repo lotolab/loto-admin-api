@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Test, TestingModule } from '@nestjs/testing';
-import { UserService } from './user.service';
-
-import { UserEntity } from '../entities';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { UserEntity } from '../entities';
+import { UserService } from './user.service';
 
 describe('UserService', () => {
   let service: UserService;

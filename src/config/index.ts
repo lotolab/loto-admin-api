@@ -1,15 +1,15 @@
+import * as chalk from 'chalk';
 import { readFileSync } from 'fs';
 import * as yaml from 'js-yaml';
-import * as chalk from 'chalk';
 import { join } from 'path';
 import { configStageKV } from './config.constants';
 
 const envMode = process.env.STAGE || 'prod';
 
-export * from './config.interface';
-export * from './typeorm.config.service';
 export * from './config.constants';
+export * from './config.interface';
 export * from './config.schema';
+export * from './typeorm.config.service';
 
 export const isDevMode = () => configStageKV[envMode] === 'dev';
 

@@ -1,12 +1,12 @@
 import { Global, Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { RouterModule } from '@nestjs/core';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
-import { AuthHelper } from './service/auth.helper';
-import { AuthService } from './service/auth.service';
-import { RouterModule } from '@nestjs/core';
 import { LotoModuleRoutes } from 'src/api/module.routes';
 import { AuthController } from './controller/auth.controller';
+import { AuthHelper } from './service/auth.helper';
+import { AuthService } from './service/auth.service';
 
 /**
  * https://medium.com/@osanmisola/jwt-authentication-for-your-nestjs-server-a-tutorial-276edf67d4ce

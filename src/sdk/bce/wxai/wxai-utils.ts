@@ -1,9 +1,9 @@
+import { IBuildAccessTokenParams } from '../../wxai/lib/interfaces/wxai.interface';
 import {
   BCE_OAUTH2_BASE,
   BCE_WXAI_BASEURL,
   BCE_WXAI_CHAT_PATH,
 } from '../../wxai/lib/wxai-constants';
-import { IBuildAccessTokenParams } from '../../wxai/lib/interfaces/wxai.interface';
 
 export const buildWxaiChatBaseUrl = (
   wxaiModelKey: string,

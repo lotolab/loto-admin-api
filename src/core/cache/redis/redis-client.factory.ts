@@ -1,7 +1,7 @@
 import { FactoryProvider } from '@nestjs/common';
-import { RedisClient } from './redis.types';
 import { ConfigService } from '@nestjs/config';
 import { createClient } from 'redis';
+import { RedisClient } from './redis.types';
 
 export const REDIS_CLIENT = Symbol('REDIS_CLIENT');
 

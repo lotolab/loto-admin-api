@@ -8,9 +8,9 @@ import {
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { LotoModuleRoutes } from 'src/api/module.routes';
-import { AuthService } from '../service/auth.service';
-import { AccountSigninDto } from '../dto';
 import { PublicApi } from 'src/decorators';
+import { AccountSigninDto } from '../dto';
+import { AuthService } from '../service/auth.service';
 
 @ApiTags(`${LotoModuleRoutes.auth.name}`)
 @Controller()

@@ -3,9 +3,9 @@ import { ConfigService } from '@nestjs/config';
 import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { RedisService } from 'src/core/cache';
-import { AuthHelper } from '../service/auth.helper';
 import { ICurrentUser, ITokenUser } from 'src/core/interface';
 import { convertDiffToSeconds } from 'src/core/utils';
+import { AuthHelper } from '../service/auth.helper';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {

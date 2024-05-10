@@ -1,15 +1,13 @@
+import { RequestMethod, ValidationPipe } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as chalk from 'chalk';
 import helmet from 'helmet';
-
-import { ConfigService } from '@nestjs/config';
-
-import { version, author, name, description } from '../package.json';
-import { isDevMode } from './config';
-import { RequestMethod, ValidationPipe } from '@nestjs/common';
-import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { author, description, name, version } from '../package.json';
 import { validationExceptionFactory } from './filters/validators';
+import { AppModule } from './app.module';
+import { isDevMode } from './config';
 import { HttpExceptionFilter } from './filters';
 
 async function bootstrap() {

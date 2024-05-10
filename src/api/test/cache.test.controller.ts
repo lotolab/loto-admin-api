@@ -9,10 +9,10 @@ import {
   Query,
 } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { LotoModuleRoutes } from '../module.routes';
-import { CacheTestService } from './cache.test.service';
 import { ICurrentUser, ILoginUser } from 'src/core/interface';
 import { CurrentUser, PublicApi } from 'src/decorators';
+import { LotoModuleRoutes } from '../module.routes';
+import { CacheTestService } from './cache.test.service';
 
 @ApiTags(`${LotoModuleRoutes.mock.name} Cache 缓存`)
 @Controller()

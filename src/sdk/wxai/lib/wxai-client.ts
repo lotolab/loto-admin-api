@@ -1,9 +1,9 @@
+import { IWxaiSDKConfig } from './interfaces/wxai.interface';
 import {
   BCE_OAUTH2_BASE,
   BCE_WXAI_BASEURL,
   BCE_WXAI_CHAT_PATH,
 } from './wxai-constants';
-import { IWxaiSDKConfig } from './interfaces/wxai.interface';
 
 export type WxaiClientType = WxaiClient;
 

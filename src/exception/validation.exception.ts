@@ -4,8 +4,8 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { ValidationError } from 'class-validator';
-import { BizCodeEnum } from './biz.code.enum';
 import { iterate } from 'iterare';
+import { BizCodeEnum } from './biz.code.enum';
 
 export class ValidationException extends HttpException {
   constructor(validErrors: ValidationError[], options?: HttpExceptionOptions) {

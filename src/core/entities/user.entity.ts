@@ -1,7 +1,7 @@
-import { Column, Entity, Index, JoinColumn, OneToOne, Unique } from 'typeorm';
-import CommonEntity from './common.entity';
 import { Exclude, Transform, Type } from 'class-transformer';
+import { Column, Entity, Index, JoinColumn, OneToOne, Unique } from 'typeorm';
 import { AccountTypeEnum, PlatformEnum, UserStatusEnum } from '../enums';
+import CommonEntity from './common.entity';
 import { UserProfileEntity } from './user.profile.entity';
 
 @Entity('sys_account')

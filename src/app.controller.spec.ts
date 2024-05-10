@@ -1,8 +1,8 @@
+import { ConfigService } from '@nestjs/config';
 import { Test, TestingModule } from '@nestjs/testing';
+import { formatDateTime } from './core/utils';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ConfigService } from '@nestjs/config';
-import { formatDateTime } from './core/utils';
 
 describe('AppController', () => {
   let appController: AppController;
