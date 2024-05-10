@@ -12,11 +12,11 @@ module.exports = {
      {value: 'chore',   name: '🚀chore:   日常维护'},
      {value: 'revert', name: '⏪  revert:    代码回滚'},
   ],
-// ​  usePreparedCommit: false, // to re-use commit from ./.git/COMMIT_EDITMSG
-//   allowTicketNumber: false,
-//   isTicketNumberRequired: false,
-//   ticketNumberPrefix: 'TICKET-',
-//   ticketNumberRegExp: '\\d{1,5}',
+​  usePreparedCommit: false, // to re-use commit from ./.git/COMMIT_EDITMSG
+  allowTicketNumber: false,
+  isTicketNumberRequired: false,
+  ticketNumberPrefix: 'TICKET-',
+  ticketNumberRegExp: '\\d{1,5}',
   messages: {
     type: '选择一种你的提交类型:',
     scope: '选择一个scope (可选):',

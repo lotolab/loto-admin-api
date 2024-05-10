@@ -148,6 +148,9 @@ devDependencies:
   cz-customizable:
     specifier: ^7.0.0
     version: 7.0.0
+  cz-git:
+    specifier: ^1.9.1
+    version: 1.9.1
   eslint:
     specifier: ^8.42.0
     version: 8.57.0
@@ -163,6 +166,9 @@ devDependencies:
   eslint-plugin-simple-import-sort:
     specifier: ^12.1.0
     version: 12.1.0(eslint@8.57.0)
+  glob:
+    specifier: ^10.3.14
+    version: 10.3.14
   husky:
     specifier: 8.0.3
     version: 8.0.3
@@ -3090,6 +3096,11 @@ packages:
       word-wrap: 1.2.5
     dev: true
 
+  /cz-git@1.9.1:
+    resolution: {integrity: sha512-GK3EI5R7GApS8u+g9QPvy/50z0NiG7ijc1NASxZaDnQn0ARzr73MjZb3Lt4cZQvKJBd8GrfvOWqHgwMQQ/OlaA==}
+    engines: {node: '>=v12.20.0'}
+    dev: true
+
   /dargs@8.1.0:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==}
     engines: {node: '>=12'}
@@ -4273,6 +4284,18 @@ packages:
       minimatch: 9.0.4
       minipass: 7.0.4
       path-scurry: 1.10.2
+    dev: true
+
+  /glob@10.3.14:
+    resolution: {integrity: sha512-4fkAqu93xe9Mk7le9v0y3VrPDqLKHarNi2s4Pv7f2yOvfhWfhc7hRPHC/JyqMqb8B/Dt/eGS4n7ykwf3fOsl8g==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    hasBin: true
+    dependencies:
+      foreground-child: 3.1.1
+      jackspeak: 2.3.6
+      minimatch: 9.0.4
+      minipass: 7.0.4
+      path-scurry: 1.11.0
 
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
@@ -6331,6 +6354,14 @@ packages:
     dependencies:
       lru-cache: 10.2.1
       minipass: 7.0.4
+    dev: true
+
+  /path-scurry@1.11.0:
+    resolution: {integrity: sha512-LNHTaVkzaYaLGlO+0u3rQTz7QrHTFOuKyba9JMTQutkmtNew8dw8wOD7mTU/5fCPZzCWpfW0XnQKzY61P0aTaw==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    dependencies:
+      lru-cache: 10.2.1
+      minipass: 7.0.4
 
   /path-to-regexp@0.1.7:
     resolution: {integrity: sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==}
@@ -7597,7 +7628,7 @@ packages:
       dayjs: 1.11.11
       debug: 4.3.4
       dotenv: 16.4.5
-      glob: 10.3.10
+      glob: 10.3.14
       ioredis: 5.4.1
       mkdirp: 2.1.6
       mysql2: 3.9.7

@@ -89,6 +89,8 @@ export class AppModule {}
 
 ## CI commitlint
 
+> https://juejin.cn/post/7031471897124700168
+
 ```bash
 # 当你在git commit时，会触发到commit-msg这个hooks，执行commitlint进行commit message校验。
 # 当检验不通过时，则不能完成本次commit操作 
@@ -96,3 +98,12 @@ pnpm exec commitlint --edit $1
 
 
 ```
+
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.cjs"
+    }
+  },
