@@ -1,6 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ConfigService } from '@nestjs/config';
+import { formatDateTime } from './core/utils';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -8,15 +10,18 @@ describe('AppController', () => {
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
       controllers: [AppController],
-      providers: [AppService],
+      providers: [ConfigService, AppService],
     }).compile();
 
     appController = app.get<AppController>(AppController);
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    const d = formatDateTime();
+    it(`should return "[time] Hey gay,I am running..."`, () => {
+      expect(appController.getHello()).toBe(
+        ` ${d}<br> Hey gay,I am running...!`,
+      );
     });
   });
 });
