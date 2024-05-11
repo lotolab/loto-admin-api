@@ -97,7 +97,7 @@ export class AppModule {}
 pnpm exec commitlint --edit $1
 
 
-```
+```json
 
   "config": {
     "commitizen": {
@@ -107,3 +107,9 @@ pnpm exec commitlint --edit $1
       "config": ".cz-config.cjs"
     }
   },
+
+```
+
+### Changelog generation
+
+> https://developer.volcengine.com/articles/7322138915329507378
